@@ -1,4 +1,4 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, ThinkingLevel } from "@google/genai";
 import { getCurrentUser } from "@/lib/get-current-user";
 
 const ai = new GoogleGenAI({
@@ -173,7 +173,7 @@ GENERAL RULES:
 
       config: {
         thinkingConfig: {
-          thinkingLevel: "minimal",
+          thinkingLevel: ThinkingLevel.MINIMAL,
         },
 
         responseMimeType: "application/json",
