@@ -80,9 +80,7 @@ function CreateQuizContent() {
       let sourceText = "";
       let quizTopic = "";
 
-      // --------------------------------
-      // TOPIC MODE
-      // --------------------------------
+
       if (mode === "topic") {
         if (!topic.trim()) {
           alert("Please enter a topic.");
@@ -94,9 +92,7 @@ function CreateQuizContent() {
         quizTopic = topic.trim();
       }
 
-      // --------------------------------
-      // TEXT MODE
-      // --------------------------------
+
       if (mode === "text") {
         if (!text.trim()) {
           alert("Please enter some study material.");
@@ -108,9 +104,6 @@ function CreateQuizContent() {
         quizTopic = "Study Material";
       }
 
-      // --------------------------------
-      // PDF MODE
-      // --------------------------------
       if (mode === "pdf") {
         if (!pdfFile) {
           alert("Please select a PDF file.");
@@ -586,20 +579,7 @@ function CreateQuizContent() {
                     True / False
                   </button>
 
-                  {/* Code */}
-                  <button
-                    type="button"
-                    disabled={loading}
-                    onClick={() => toggleType("code")}
-                    className={`flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-semibold transition-all ${
-                      questionTypes.includes("code")
-                        ? "border-purple-500 bg-purple-50 text-purple-700 shadow-sm"
-                        : "border-slate-300 bg-white text-slate-600 hover:border-purple-300 hover:bg-purple-50/40"
-                    }`}
-                  >
-                    <Code className="h-4 w-4" />
-                    Code
-                  </button>
+                  
                 </div>
               </div>
 
